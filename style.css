@@ -1,3 +1,40 @@
+body {
+  margin: 0;
+  background-color: #e8e5f4;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.cir{
+  height: 400px;
+  width:520px;
+  background-color:#efaa86;
+  border-radius: 700px/500px;
+  transform: rotate(15deg);
+  position: absolute;
+  margin-left:-80vw;
+  margin-top:-50vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.cird{
+  position: absolute;
+  height: 400px;
+  width:550px;
+  background-color:#3dc5b7;
+  border-radius: 700px/500px;
+  margin-left:80vw;
+  margin-top:105vh;
+  margin-right: 18vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
 :root {
   --main-bg-color: #edf5fe;
   --light-blue: #03a9f4;
@@ -5,28 +42,22 @@
   --container-width: 500px;
 }
 
-body {
-  font-family: system-ui;
-  background: var(--main-bg-color);
-  height: 98vh;
-  overflow: hidden;
-}
-
 .logo {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 150px;
+  top: 5px;
+  right:10px;
+  width: 120px;
+  border-radius: 40px;
 }
 
 .image-vector {
-  width: 50vw;
-  height: 50vh;
+  width: 500px;
+  height: 500px;
   background: url(/undraw-upload.svg) no-repeat center;
   background-size: contain;
+
 }
 
-body,
 .upload-container,
 .drop-zone {
   display: flex;
@@ -42,6 +73,7 @@ body,
   background: #ffffff;
   border-radius: 25px;
   box-shadow: 0px 20px 20px 0px #00000017;
+  margin-top: 100px;
 }
 
 .drop-zone {
@@ -246,6 +278,11 @@ body,
   cursor: pointer;
 }
 
+button:hover{
+  color: black;
+  background-color: #03a9f4;
+}
+
 .toast {
   position: absolute;
   bottom: 10px;
@@ -270,6 +307,16 @@ body,
     --container-width: 320px;
   }
   .image-vector {
+    display: none;
+  }
+  .upload-container{
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px 0px #00000017;
+    margin-top: 50px;
+    z-index: 26;
+  }
+  .logo{
     display: none;
   }
   .email-container .filed {
